@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arquivos da Professora</title>
+  <link rel="stylesheet" href="../css/arquivos.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <h1>Arquivos da Profª Maria Oliveira</h1>
+      <p>Confira aqui todos os materiais e documentos disponíveis.</p>
+    </div>
+  </header>
+
+  <nav>
+    <ul class="nav-list container">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="#arquivos">Arquivos</a></li>
+    </ul>
+  </nav>
+
+  <!-- Formulário de upload -->
+  <div class="container" style="margin-top: 20px;">
+    <form action="upload.php" method="post" enctype="multipart/form-data" id="uploadForm">
+      <label for="fileUpload" class="upload-btn" tabindex="0">Adicionar Documento</label>
+      <input type="file" name="arquivo" id="fileUpload" style="display: none;" required />
+      <button type="submit" class="upload-btn" style="margin-left: 10px;">Enviar</button>
+    </form>
+  </div>
+
+  <main class="container">
+    <section id="arquivos" class="card">
+      <h2>Material para Download</h2>
+      <div class="busca-container">
+        <input type="text" id="pesquisa" placeholder="Pesquisar arquivo..." />
+      </div>
+
+      <div class="arquivos-grid" id="arquivosGrid">
+        <!-- Arquivos adicionados dinamicamente aparecerão aqui -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Professora Maria Oliveira. Todos os direitos reservados.</p>
+  </footer>
+
+  <script type="module" src="../js/arquivo.js"></script>
+  <script>
+    // Clique no label abre o input file (para acessibilidade)
+    document.querySelector('label[for="fileUpload"]').addEventListener('keydown', e => {
+      if(e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        document.getElementById('fileUpload').click();
+      }
+    });
+  </script>
+</body>
+</html>

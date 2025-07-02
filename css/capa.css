@@ -1,0 +1,238 @@
+/* Reset básico */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #5a5656;
+    color: #e0e0e0;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Container centralizado */
+  .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* Header */
+  header {
+    background: linear-gradient(90deg, #1f1f1f, #2a2a2a);
+    padding: 2.5rem 0;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #f05454;
+    flex-shrink: 0;
+  }
+  
+  .header-text h1 {
+    font-size: 2.8rem;
+    color: #f05454;
+  }
+  
+  .subtitle {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    color: #bbb;
+  }
+  
+  /* Navegação */
+  nav {
+    margin-bottom: 2rem;
+  }
+  
+  .nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    list-style: none;
+    background-color: #222222;
+    padding: 1rem 0;
+    border-radius: 8px;
+  }
+  
+  .nav-list li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-list li a:hover,
+  .nav-list li a:focus {
+    color: #f05454;
+    outline: none;
+  }
+  
+  /* Seções */
+  main {
+    flex-grow: 1;
+  }
+  
+  .card {
+    background-color: #1e1e1e;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(240, 84, 84, 0.3);
+  }
+  
+  .card h2 {
+    color: #f05454;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #f05454;
+    padding-bottom: 0.3rem;
+  }
+  
+  /* Sobre Mim */
+  .sobre-content {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .sobre-text {
+    flex: 1 1 300px;
+    font-size: 1.1rem;
+    color: #ddd;
+  }
+  
+  .sobre-img img {
+    width: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(240, 84, 84, 0.4);
+  }
+  
+  /* Projetos */
+  .projetos-grid {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .projeto-item {
+    background-color: #2b2b2b;
+    border-radius: 8px;
+    width: 280px;
+    padding: 1rem;
+    box-shadow: 0 0 8px rgba(240, 84, 84, 0.3);
+    transition: transform 0.3s ease;
+    cursor: default;
+  }
+  
+  .projeto-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 15px rgba(240, 84, 84, 0.6);
+  }
+  
+  .projeto-item img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 0.8rem;
+    object-fit: cover;
+    height: 160px;
+  }
+  
+  .projeto-item h3 {
+    color: #f05454;
+    margin-bottom: 0.5rem;
+  }
+  
+  .projeto-item p {
+    font-size: 0.95rem;
+    color: #ccc;
+  }
+  
+  /* Publicações */
+  .publicacoes-list {
+    list-style: disc inside;
+    color: #ccc;
+    font-size: 1rem;
+  }
+  
+  .publicacoes-list strong {
+    color: #f05454;
+  }
+  
+  /* Contato */
+  #contato p,
+  #contato a {
+    font-size: 1.1rem;
+    color: #ddd;
+    margin-bottom: 0.6rem;
+  }
+  
+  #contato a {
+    color: #f05454;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  #contato a:hover,
+  #contato a:focus {
+    color: #ff7b7b;
+    outline: none;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #222222;
+    text-align: center;
+    padding: 1rem 0;
+    color: #777;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .header-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .sobre-content {
+      flex-direction: column;
+    }
+  
+    .sobre-img img {
+      width: 100%;
+      max-width: 350px;
+      margin: 1rem auto 0;
+    }
+  
+    .projetos-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .projeto-item {
+      width: 90%;
+    }
+  }
+  
